@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabatha Barreto | Portfólio Profissional</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafafa;
+            color: #1a1a1a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* --- HEADER --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2.5rem 0;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: #1a1a1a;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 7rem 0 5rem;
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            letter-spacing: -1.5px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #666;
+            font-weight: 300;
+            max-width: 700px;
+        }
+
+        /* --- PORTFÓLIO --- */
+        .portfolio {
+            padding: 4rem 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .project-card {
+            display: block;
+            cursor: pointer;
+        }
+
+        .project-image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            background-color: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1.2rem;
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.04);
+        }
+
+        .project-info h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            letter-spacing: -0.3px;
+        }
+
+        .project-info p {
+            font-size: 0.95rem;
+            color: #777;
+        }
+
+        /* --- METODOLOGIA --- */
+        .methodology {
+            padding: 8rem 0;
+            border-top: 1px solid #eaeaea;
+            margin-top: 4rem;
+        }
+
+        .methodology h2 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 4rem;
+            letter-spacing: -1px;
+        }
+
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 3.5rem;
+        }
+
+        .method-step h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        .method-step span {
+            font-size: 0.85rem;
+            color: #999;
+            font-weight: 400;
+        }
+
+        .method-step p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 4rem 0;
+            border-top: 1px solid #eaeaea;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-contact {
+            padding: 1rem 2rem;
+            background-color: #1a1a1a;
+            color: #fff;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-contact:hover {
+            background-color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .grid { grid-template-columns: 1fr; }
+            header { flex-direction: column; gap: 1.5rem; }
+            footer { flex-direction: column; gap: 2rem; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">Tabatha Barreto</div>
+            <nav>
+                <ul>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#metodo">Método</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>Design gráfico e identidades visuais com propósito.</h1>
+            <p>Transformo ideias em marcas fortes e projetos visuais que comunicam a essência do seu negócio de forma estética, inteligente e memorável.</p>
+        </section>
+
+        <section id="projetos" class="portfolio">
+            <div class="grid">
+                <!-- Substitua o link do Behance e as imagens conforme a sua necessidade -->
+                <a href="https://behance.net/seu-perfil" target="_blank" class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&q=80&w=800" alt="Identidade Visual">
+                    </div>
+                    <div class="project-info">
+                        <h3>Identidade Visual</h3>
+                        <p>Branding para estúdio de arquitetura</p>
+                    </div>
+                </a>
+                
+                <a href="https://behance.net/seu-perfil" target="_blank" class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1629752187687-3d3c7ea3a21b?auto=format&fit=crop&q=80&w=800" alt="Design Editorial">
+                    </div>
+                    <div class="project-info">
+                        <h3>Design Editorial</h3>
+                        <p>Diagramação e direção de arte para revista cultural</p>
+                    </div>
+                </a>
+
+                <a href="https://behance.net/seu-perfil" target="_blank" class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800" alt="Social Media">
+                    </div>
+                    <div class="project-info">
+                        <h3>Social Media</h3>
+                        <p>Estratégia e criação de assets digitais para e-commerce</p>
+                    </div>
+                </a>
+                
+                <a href="https://behance.net/seu-perfil" target="_blank" class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1628191139360-4083564d03fd?auto=format&fit=crop&q=80&w=800" alt="Embalagem">
+                    </div>
+                    <div class="project-info">
+                        <h3>Design de Embalagem</h3>
+                        <p>Rótulos e embalagens para linha de cosméticos naturais</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Botão de chamada para o Behance -->
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="https://behance.net/seu-perfil" target="_blank" class="btn-contact" style="background-color: #0057ff; color: white;">Ver portfólio completo no Behance</a>
+            </div>
+        </section>
+
+        <section id="metodo" class="methodology">
+            <h2>Processo Criativo</h2>
+            <div class="method-grid">
+                <div class="method-step">
+                    <h4><span>01.</span> Briefing</h4>
+                    <p>Imersão no seu negócio para entender os desafios, o público-alvo e os objetivos centrais do projeto.</p>
+                </div>
+                <div class="method-step">
+                    <h4><span>02.</span> Conceituação</h4>
+                    <p>Pesquisa de referências, análise de mercado e ideação para definir a rota visual e estratégica.</p>
+                </div>
+                <div class="method-step">
+                    <h4><span>03.</span> Design</h4>
+                    <p>Criação prática: logotipos, paletas de cores, escolhas tipográficas, diagramação e peças visuais.</p>
+                </div>
+                <div class="method-step">
+                    <h4><span>04.</span> Entrega</h4>
+                    <p>Refinamento final, fechamento de arquivos nos padrões técnicos e entrega do manual da marca.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contato">
+            <div class="footer-info">
+                <p>© 2026 Tabatha Barreto. Design Gráfico.<br>
+                <a href="https://behance.net/seu-perfil" target="_blank" style="text-decoration: underline; color: #666; font-size: 0.9rem; margin-top: 0.5rem; display: inline-block;">Me acompanhe no Behance</a></p>
+            </div>
+            <a href="mailto:seuemail@exemplo.com" class="btn-contact">Vamos criar juntos?</a>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
